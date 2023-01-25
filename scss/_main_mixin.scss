@@ -1,0 +1,28 @@
+@mixin main($align) {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-content: $align;
+    background-color: $bg__white;
+    margin-top: 1.5em;
+    margin: auto;
+  }
+
+
+  @mixin Designer{
+    margin-top: 0.5em;
+    margin-left: 0.7em;
+}
+
+
+@mixin card{
+    // border: 2px solid red;
+   display: flex;
+   justify-content: space-between;
+    height: 80vh;
+    width: 96%;
+    margin-top: 2em;
+    // grid-gap: 1.6em;
+    margin: 3em auto;
+    padding: 1em;
+}

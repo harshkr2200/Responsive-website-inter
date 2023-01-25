@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px 1fr 1fr 80px;
+  gap: 0.5rem;
+}
+
+.Header {
+  grid-column: 1/-1;
+}
+.Header .Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #fff;
+  margin-top: 1.5em;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.Header .Navbar .Navbar__logo a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: black;
+  padding: 0.8em;
+  font-weight: 500;
+  display: inline-block;
+  padding-left: 2em;
+}
+.Header .Navbar .Navbar__links li {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: black;
+  padding: 1em;
+  font-weight: 400;
+  display: inline-block;
+  padding-left: 2em;
+  padding-top: 1.7em;
+}
+.Header .Navbar .Navbar__links a {
+  text-decoration: none;
+  color: black;
+}
+.Header .Navbar .Navbar__links {
+  margin-right: 5em;
+}
+.Header .Navbar .Navbar__links a:hover {
+  color: red;
+}
+
+.Main {
+  padding: 1rem;
+  grid-column: 1/-1;
+}
+.Main .Main__container {
+  font-size: 62.5%;
+  margin-top: 0.5em;
+  margin-left: 0.7em;
+}
+.Main .main__text {
+  text-decoration: none;
+  font-size: 15em;
+  font-weight: 700;
+  line-height: 0.9em;
+}
+.Main .main__text a {
+  text-decoration: none;
+  color: #ff002e;
+  font-weight: 700;
+}
+.Main .Main__loremtext {
+  font-size: 1.2rem;
+  margin: 4.7em 9em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+.Main .btn {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.9em 1.5em;
+  font-size: 1.2rem;
+  background-color: #fff;
+  margin: 0.5em 8.5em;
+}
+.Main .btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.Section {
+  padding: 0.5rem;
+  grid-column: 1/-1;
+}
+.Section .card_contanier {
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+  width: 96%;
+  margin-top: 2em;
+  margin: 3em auto;
+  padding: 1em;
+}
+.Section .card_contanier .left_card {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 32%;
+  padding-left: 1.5em;
+  transition: transform 0.4s;
+}
+.Section .card_contanier .left_card:hover {
+  transform: scale(0.9);
+  color: red;
+}
+.Section .card_contanier .middle_card {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 32%;
+  margin: 1em;
+  transition: transform 0.4s;
+  padding-top: 5em;
+}
+.Section .card_contanier .middle_card:hover {
+  transform: scale(0.9);
+  color: red;
+}
+.Section .card_contanier .right_card {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 32%;
+  transition: transform 0.4s;
+}
+.Section .card_contanier .right_card:hover {
+  transform: scale(0.9);
+  color: red;
+}
+.Section .card_contanier h4 {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .Navbar__links ul {
+    width: 100%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+  .Navbar__logo a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-left: 90%;
+  }
+  .main__text a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .card_contanier {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .left_card {
+    width: 100%;
+  }
+  .btn {
+    width: 50%;
+    text-align: center;
+  }
+  .Main__loremtext {
+    text-align: center;
+    padding: 1em;
+  }
+}/*# sourceMappingURL=style.css.map */

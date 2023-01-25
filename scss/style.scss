@@ -1,0 +1,173 @@
+@import "_var.scss";
+@import "_mixin.scss";
+@import "_main_mixin.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px 1fr 1fr 80px;
+  gap: 0.5rem;
+}
+
+.Header {
+  grid-column: 1/-1;
+
+  .Navbar {
+    @include main(center);
+    box-shadow: $box__shadow;
+
+    .Navbar__logo a {
+      @include linkslogo(1.6rem, 0.8em, $bg_black, 500);
+    }
+
+    .Navbar__links li {
+      @include linkslogo(1.1rem, 1em, $bg_black, 400);
+      padding-top: 1.7em;
+    }
+
+    .Navbar__links a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .Navbar__links {
+      margin-right: 5em;
+    }
+    .Navbar__links a:hover {
+      color: $bg_red;
+    }
+  }
+}
+
+.Main {
+  //   border: 2px solid gray;
+  padding: 1rem;
+  grid-column: 1/-1;
+
+  .Main__container {
+    font-size: 62.5%;
+    @include Designer;
+  }
+
+  .main__text {
+    @include Main_text(0.3em);
+
+    a {
+      text-decoration: none;
+      color: $bg__main;
+      font-weight: 700;
+    }
+  }
+
+  .Main__loremtext {
+    @include loremtext(1.2rem);
+    letter-spacing: 0.1em;
+    font-weight: 300;
+  }
+
+  .btn {
+    @include btn;
+
+    a {
+      text-decoration: none;
+      color: $bg_black;
+    }
+  }
+}
+
+.Section {
+  //   border: 2px solid gray;
+  padding: 0.5rem;
+  grid-column: 1/-1;
+
+  .card_contanier {
+    @include card;
+
+    .left_card {
+      @include back;
+      padding-left: 1.5em;
+      transition: transform 0.4s;
+    }
+
+    .left_card:hover {
+      @include hover;
+    }
+
+    .middle_card {
+      @include back;
+      margin: 1em;
+      transition: transform 0.4s;
+      padding-top: 5em;
+    }
+
+    .middle_card:hover {
+      @include hover;
+    }
+
+    .right_card {
+      @include back;
+      transition: transform 0.4s;
+    }
+
+    .right_card:hover {
+      @include hover;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .Navbar__links ul {
+    width: 100%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+
+  .Navbar__logo a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-left: 90%;
+  }
+  .main__text a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .card_contanier {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .left_card {
+    width: 100%;
+  }
+
+  .btn {
+    width: 50%;
+    text-align: center;
+    // margin: auto;
+    // margin-left: 70%;
+  }
+
+  .Main__loremtext {
+    text-align: center;
+    padding: 1em;
+  }
+}
